@@ -1,0 +1,15 @@
+ALGORITHM insertion_sort
+VAR
+    i,j:INTEGER;
+    tab : ARRAY_OF INTEGER[50];
+BEGIN
+    FOR i FROM 1 TO tab.length-1 DO
+        value := tab[i]; //tab[0] 
+        j := i-1; //j=0
+        WHILE (j >= 0 AND tab[j] > value) DO
+            tab[j+1] := tab[j];
+            j := j-1;
+        END_WHILE
+        tab[j+1] = value;      
+    END_FOR
+END
